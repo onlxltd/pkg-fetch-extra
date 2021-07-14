@@ -23,7 +23,8 @@ async function download(
   { tag, name }: Remote,
   local: string
 ): Promise<boolean> {
-  const url = `https://github.com/vercel/pkg-fetch/releases/download/${tag}/${name}`;
+  const url = `https://github.com/vercel/pkg-fetch/releases/download/${tag}/uploaded-${tag}-${name}`;
+  console.log('Download from', url)
 
   try {
     await downloadUrl(url, local);
@@ -143,6 +144,7 @@ export async function need(opts: NeedOptions) {
       if ((await hash(fetched)) === EXPECTED_HASHES[remote.name]) {
         return fetched;
       }
+      console.log(remote.name)
 
       fs.unlinkSync(fetched);
       throw wasReported('Binary hash does NOT match.');

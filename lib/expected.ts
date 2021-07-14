@@ -119,4 +119,7 @@ export const EXPECTED_HASHES: Record<string, string> = {
     'd850dc2a4bb315df497498812b43885ff5d05b2943128687ed4f95510aca44e1',
   'node-v16.4.1-macos-arm64':
     '86dd0d3dd1b8ce3b233ba70c887bd120577660b00b097c59db454d307595bc3b',
+
+  'node-v14.4.0-macos-x64':
+    '83aeeae82dab74148913bdb21bbbb45f0d6e6993d11c3410c29cde2aeb65d4ba'
 };
